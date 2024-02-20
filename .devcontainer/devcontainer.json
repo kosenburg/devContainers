@@ -1,5 +1,8 @@
 {
     "build": { "dockerfile": "Dockerfile" },
+    "mounts": [
+        "type=bind,source=${localEnv:HOME}/.ssh,target=/root/.ssh,readonly",
+    ],
     "features": {
        "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
             "version": "latest"
